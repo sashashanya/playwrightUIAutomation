@@ -37,15 +37,17 @@ export default defineConfig({
   expect:{
     timeout: 5000
   },
-  testMatch: 'test.list.ts',
+  //testMatch: 'test.list.ts',
 
   /* Configure projects for major browsers */
   projects: [
     { name: 'setup', testMatch: /.*\.setup\.ts/ },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], headless: false, storageState: './.auth/user.json', },
-      dependencies: ['setup']
+      use: { ...devices['Desktop Chrome'], headless: false, 
+      }
+        //storageState: './.auth/user.json', },
+      //dependencies: ['setup']
     },
 
 
